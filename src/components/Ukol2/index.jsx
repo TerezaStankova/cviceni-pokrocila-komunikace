@@ -4,15 +4,15 @@ import './style.css';
 
 /*
   Zadání: V tomto úkolu máme několik tlačítek, která představují mince. Při kliknutí na 
-  tlačítko chceme do celké částky přidat hodnotu mince.
+    tlačítko chceme do celé částky přidat hodnotu mince.
 
   Krok 1: Do komponenty `CoinButton` přidejte prop `onCoinClick`, která bude očekávat 
-  funkci, která se zavolá při kliknutí na tlačítko. Komponenta funkci zavolá s hodnout své 
-  prop `value`.
+    funkci, která se zavolá při kliknutí na tlačítko. Komponenta funkci zavolá s hodntou své 
+    prop `value`.
 
   Krok 2: V komponentě `Ukol2` založte funkci `handleCoinClick`, která bude mít jeden 
-  parametr `value`. Ve funkci přidejte k hodnotě `amount` hodnotu `value`. Tuto funkci pak 
-  předejte komponentě `CoinButton` jako prop `onCoinClick`.
+    parametr `value`. Ve funkci přidejte k hodnotě `amount` hodnotu `value`. Tuto funkci pak 
+    předejte komponentě `CoinButton` jako prop `onCoinClick`.
 
   Vykoušejte, že jde přidat částka pomocí tlačítek.
 */
