@@ -23,7 +23,7 @@ export const Ukol2 = () => {
   return (
     <>
       <p>
-        <strong>Částka: {amount} kč</strong>
+        <strong>Částka: {amount} Kč</strong>
       </p>
       <div className="button-group">
         <CoinButton value={1} />
