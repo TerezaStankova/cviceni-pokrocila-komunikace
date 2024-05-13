@@ -20,11 +20,11 @@ import './style.css';
     a naopak.
 
   Krok 4: Přejďete na pokročilejší komunikaci. V komponentě Ukol1 založte funkci 
-    `handleSwitch`, která bude mít jeden parametr `isOn`. Tuto funkci předejte komponentě 
+    `handleSwitch`, která bude mít jeden parametr `shouldBeOn`. Tuto funkci předejte komponentě 
     SwitchButton jako prop `onSwitch`. Ve funkci `handleSwitch` nastavte stav `bulbOn` podle 
-    parametru `isOn`. Vyzkoušejte, že jde pomocí vypínače žárovku zapnout a vypnout.
+    parametru `shouldBeOn`. Vyzkoušejte, že jde pomocí vypínače žárovku zapnout a vypnout.
 
-  Krok 5: Pokud bude chtít uživatel žárovku zapnout, tak se ho zeptejte, jestli je si 
+  Krok 5: Pokud bude chtít uživatel žárovku zapnout, tak se ho ve funkci `handleSwitch` zeptejte, jestli je si 
     opravdu jistý pomocí window.confirm. Pokud uživatel odpoví ne, tak žárovku nezapínejte. 
     Pokud uživatel chce žárovku vypnout, tak se ho neptejte a žárovku rovnou vypněte.
 */
