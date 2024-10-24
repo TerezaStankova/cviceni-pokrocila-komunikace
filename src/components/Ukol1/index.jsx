@@ -33,11 +33,20 @@ import { useState } from 'react';
 export const Ukol1 = () => {
   const [bulbOn, setBulbOn] = useState(true);
 
+  const handleSwitch = (shouldBeOn) => {
+    if(shouldBeOn) {
+      window.confirm("Opravdu zapnout?") ? setBulbOn(shouldBeOn) : setBulbOn(!shouldBeOn);
+    } else {
+      setBulbOn(shouldBeOn); 
+    }
+      
+  };
+
 
   return (
     <>
       <div className={bulbOn ? "bulb bulb--on" : "bulb"} />
-      <SwitchButton label={!bulbOn ? "Zapnout" : "Vypnout"} onSwitch={setBulbOn}/>
+      <SwitchButton label={!bulbOn ? "Zapnout" : "Vypnout"} onSwitch={handleSwitch}/>
     </>
   );
 };
