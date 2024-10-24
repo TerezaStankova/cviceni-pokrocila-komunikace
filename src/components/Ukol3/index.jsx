@@ -15,18 +15,26 @@ import { Product } from "./Product";
     `handleAddToCart` s parametrem `price`. Ve funkci zvyšte stav `totalPrice` o vybranou 
     cenu a předejte tuto funkci komponentě `Product` skrze prop `onAddToCart`.
 */
+import { useState   } from "react";
+
 
 export const Ukol3 = () => {
+  const [amount, setAmount] = useState(0);
+
+  const addToCart = (price) => {
+    setAmount(amount+price);      
+  };
+
   return (
     <>
       <p>
-        Cena: <strong>0 Kč</strong>
+        Cena: <strong>{amount} Kč</strong>
       </p>
       <div className="products">
-        <Product image="/clothing/item01.jpg" name="Bunda" price={500} />
-        <Product image="/clothing/item02.jpg" name="Halenka" price={1200} />
-        <Product image="/clothing/item03.jpg" name="Svetr" price={1500} />
-        <Product image="/clothing/item04.jpg" name="Mikina" price={800} />
+        <Product image="/clothing/item01.jpg" name="Bunda" price={500} onAddToCart={addToCart}/>
+        <Product image="/clothing/item02.jpg" name="Halenka" price={1200} onAddToCart={addToCart}/>
+        <Product image="/clothing/item03.jpg" name="Svetr" price={1500} onAddToCart={addToCart}/>
+        <Product image="/clothing/item04.jpg" name="Mikina" price={800} onAddToCart={addToCart}/>
       </div>
     </>
   );
